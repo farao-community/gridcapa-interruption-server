@@ -63,7 +63,7 @@ jobs:
       - name: Build and publish Docker image
         uses: elgohr/Publish-Docker-Github-Action@v5
         with:
-          name: farao/gridcapa-task-manager
+          name: farao/gridcapa-interruption-server
           username: farao
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           tags: v${{ github.event.inputs.releaseVersion }}
