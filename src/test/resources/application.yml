@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: gridcapa-interruption-server
+  liquibase:
+    change-log: classpath:/db/changelog-master.xml
+  jpa:
+    properties:
+      hibernate:
+        timezone:
+          default_storage: NORMALIZE_UTC
+    hibernate:
+      ddl-auto: validate
+
+interruption-server:
+  purge-task-events:
+    cron: 0 0 12 * * *
+    nb-days: 7
