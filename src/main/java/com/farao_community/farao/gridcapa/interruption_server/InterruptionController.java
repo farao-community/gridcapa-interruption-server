@@ -36,6 +36,9 @@ public class InterruptionController {
 
     @GetMapping(value = "/interrupted/{runId}")
     public ResponseEntity<Boolean> isInterruptionAsked(@PathVariable String runId) {
+        if (runId == null) {
+            return ResponseEntity.ok(false);
+        }
         return ResponseEntity.ok(interruptService.exitsByRunId(UUID.fromString(runId)));
     }
 
