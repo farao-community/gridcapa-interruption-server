@@ -33,6 +33,7 @@
     </developers>
 
     <properties>
+        <argLine /> <!-- required for java agent declaration, do not remove -->
         <!-- Dependency versions -->
         <postgres.jdbc.version>42.3.9</postgres.jdbc.version>
         <liquibase.version>4.28.0</liquibase.version>
@@ -93,7 +94,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
-                    <argLine>-javaagent:${org.mockito:mockito-core:jar}</argLine>
+                    <argLine>@{argLine} -javaagent:${org.mockito:mockito-core:jar}</argLine>
                 </configuration>
             </plugin>
             <plugin>
