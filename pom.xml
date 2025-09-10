@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>gridcapa-interruption-server</artifactId>
-    <version>1.5.0-SNAPSHOT</version>
+    <version>1.5.0</version>
     <name>GridCapa interruption server</name>
     <description>Interruption server for GridCapa application</description>
     <url>http://www.farao-community.com</url>
